@@ -31,3 +31,13 @@ Verb
 
 - [Deno](https://deno.land/)
 - [Deno Deploy](https://deno.com/deploy) ( It runs [free](https://deno.com/deploy/pricing) )
+
+## Local
+
+```shell
+deno run -A --watch ./app.tsx
+```
+
+## Deploy
+
+<https://deno.com/deploy/docs/deployctl>
