@@ -1,5 +1,5 @@
 // @ts-ignore TS2691
-import { serve } from "https://deno.land/std@0.140.0/http/server.ts";
+import { serve } from "https://deno.land/std@0.153.0/http/server.ts";
 
 async function handler(req: Request): Promise<Response> {
   const request_url = new URL(req.url);
