@@ -4,7 +4,6 @@ CORS Korosu is CORS Killer.
 
 I used to [cors-anywhere](https://github.com/Rob--W/cors-anywhere) on Heroku, but Heroku is going to charge for it, so I made a simple one that works with Deno Deploy for free.
 
-
 ```javascript
 // before
 fetch('https://hnrss.org/newest')
