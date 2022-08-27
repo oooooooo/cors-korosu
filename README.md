@@ -17,7 +17,7 @@ Korosu means kill in Japanese.
 
 ```text
 Pronunciation
-(Tokyo) ころす [kòrósú] (Heiban – [0])[1][2]
+(Tokyo) ころす [kòrósú] (Heiban)
 
 Verb
 殺す • (korosu) godan (stem 殺し (koroshi), past 殺した (koroshita))
