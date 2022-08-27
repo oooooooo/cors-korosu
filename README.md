@@ -35,7 +35,7 @@ Verb
 ## Local
 
 ```shell
-deno run -A --watch ./app.tsx
+deno run --allow-net --allow-read --watch ./app.ts
 ```
 
 ## Deploy
