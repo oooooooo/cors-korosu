@@ -17,7 +17,7 @@ async function handler(req: Request): Promise<Response> {
     body = await Deno.readFile("./favicon.ico");
     content_type = "image/x-icon";
   } else {
-    if (!url.match(/https?:\/\//)) {
+    if (!url.match(/^https?:\/\//)) {
       url = "https://" + url;
     }
 
