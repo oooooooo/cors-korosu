@@ -41,3 +41,7 @@ deno run -A --watch ./app.tsx
 ## Deploy
 
 <https://deno.com/deploy/docs/deployctl>
+
+## License
+
+[MIT License](https://opensource.org/licenses/MIT)
