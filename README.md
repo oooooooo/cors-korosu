@@ -2,8 +2,8 @@
 
 CORS Korosu is CORS Killer.
 
-You will encounter CORS if you fetch() from your browser.
-Avoid CORS by specifying CORS Korosu in the fetch().
+I used to [cors-anywhere](https://github.com/Rob--W/cors-anywhere) on Heroku, but Heroku is going to charge for it, so I made a simple one that works with Deno Deploy for free.
+
 
 ```javascript
 // before
