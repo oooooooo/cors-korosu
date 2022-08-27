@@ -3,7 +3,7 @@ import { serve } from "https://deno.land/std@0.140.0/http/server.ts";
 
 async function handler(req: Request): Promise<Response> {
   const request_url = new URL(req.url);
-  const url = request_url.href.replace(request_url.origin + "/", "");
+  let url = request_url.href.replace(request_url.origin + "/", "");
 
   let body: ReadableStream | string | null;
   let content_type: string | null;
@@ -17,6 +17,10 @@ async function handler(req: Request): Promise<Response> {
     body = await Deno.readFile("./favicon.ico");
     content_type = "image/x-icon";
   } else {
+    if (!url.match(/https?:\/\//)) {
+      url = "https://" + url;
+    }
+
     const resp = await fetch(url);
     body = resp.body;
     content_type = resp.headers.get("content-type");

@@ -10,6 +10,7 @@ fetch('https://hnrss.org/newest')
 
 // after
 fetch('https://your-account.deno.dev/https://hnrss.org/newest')
+fetch('https://your-account.deno.dev/hnrss.org/newest')
 ```
 
 Korosu means kill in Japanese.
