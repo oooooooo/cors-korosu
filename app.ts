@@ -31,7 +31,8 @@ async function handler(req: Request): Promise<Response> {
     status: status,
     // @ts-ignore TS2322
     headers: {
-      "content-type": content_type,
+      "Access-Control-Allow-Origin": "*",
+      "content-type": content_type
     },
   });
 }
