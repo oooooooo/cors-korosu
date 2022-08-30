@@ -5,8 +5,9 @@ async function handler(req: Request): Promise<Response> {
   const request_url = new URL(req.url);
   let url = request_url.href.replace(request_url.origin + "/", "");
 
-  let body: ReadableStream | string | null;
-  let content_type: string | null;
+  type bodyType = ReadableStream | string | null
+  let body: bodyType = null
+  let content_type: string | null
   let status = 200;
   if (url === "") {
     const sample_url = request_url + "https://hnrss.org/newest";
