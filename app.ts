@@ -23,10 +23,26 @@ async function handler(req: Request): Promise<Response> {
       url = "https://" + url;
     }
 
-    const resp = await fetch(url);
-    body = resp.body;
-    content_type = resp.headers.get("content-type");
-    status = resp.status;
+    const response = await fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+        return response;
+      })
+      .catch((error) => {
+        return error;
+      });
+
+    if (response.body === undefined) {
+      body = `{ "error": "${response}" }`;
+      content_type = "application/json";
+      status = 500;
+    } else {
+      body = response.body;
+      content_type = response.headers.get("content-type");
+      status = response.status;
+    }
   }
 
   return new Response(body, {
