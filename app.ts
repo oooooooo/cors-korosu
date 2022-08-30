@@ -1,11 +1,12 @@
 // @ts-ignore TS2691
 import { serve } from "https://deno.land/std@0.153.0/http/server.ts";
 
+type bodyType = ReadableStream | string | null
+
 async function handler(req: Request): Promise<Response> {
   const request_url = new URL(req.url);
   let url = request_url.href.replace(request_url.origin + "/", "");
 
-  type bodyType = ReadableStream | string | null
   let body: bodyType = null
   let content_type: string | null
   let status = 200;
