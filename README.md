@@ -38,6 +38,12 @@ Verb
 deno run --allow-net --allow-read --watch ./app.ts
 ```
 
+## Test
+
+```shell
+deno test --allow-net app_test.ts
+```
+
 ## Deploy
 
 <https://deno.com/deploy/docs/deployctl>
