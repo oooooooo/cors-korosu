@@ -2,15 +2,17 @@
 
 CORS Korosu is CORS Killer.
 
-I used to [cors-anywhere](https://github.com/Rob--W/cors-anywhere) on Heroku, but Heroku is going to charge for it, so I made a simple one that works with Deno Deploy for free.
+I used to [cors-anywhere](https://github.com/Rob--W/cors-anywhere) on Heroku,
+but Heroku is going to charge for it, so I made a simple one that works with
+Deno Deploy for free.
 
 ```javascript
 // before
-fetch('https://hnrss.org/newest')
+fetch("https://hnrss.org/newest");
 
 // after
-fetch('https://your-account.deno.dev/https://hnrss.org/newest')
-fetch('https://your-account.deno.dev/hnrss.org/newest')
+fetch("https://your-account.deno.dev/https://hnrss.org/newest");
+fetch("https://your-account.deno.dev/hnrss.org/newest");
 ```
 
 Korosu means kill in Japanese.
@@ -30,7 +32,8 @@ Verb
 ## Requirements
 
 - [Deno](https://deno.land/)
-- [Deno Deploy](https://deno.com/deploy) ( It runs [free](https://deno.com/deploy/pricing) )
+- [Deno Deploy](https://deno.com/deploy) ( It runs
+  [free](https://deno.com/deploy/pricing) )
 
 ## Local
 
